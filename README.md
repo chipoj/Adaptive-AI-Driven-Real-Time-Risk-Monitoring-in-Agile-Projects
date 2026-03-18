@@ -190,8 +190,6 @@ This project is licensed under the MIT License.
 
 This work was conducted as part of a postgraduate research study in applied data science, focusing on AI-driven risk management in Agile software projects.
 
-````
 
 
-Paste the exact GitHub error message if it shows one, and I’ll decode it.
-```
+
