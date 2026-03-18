@@ -70,4 +70,87 @@ Models are evaluated using:
 
 ---
 
-## Project Structure
+
+---
+
+## Technology Stack
+
+- Python  
+- pandas, NumPy  
+- scikit-learn  
+- River (for streaming models)  
+- Streamlit  
+- Jira REST API  
+
+---
+
+## Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/adaptive-agile-risk-monitoring.git
+cd adaptive-agile-risk-monitoring
+
+###  2. Create virtual environment
+python -m venv venv
+source venv/bin/activate      # Linux / Mac
+venv\Scripts\activate         # Windows
+
+### 3. Install dependencies
+pip install -r requirements.txt
+
+###  4. Add datasets
+
+Place all datasets inside:
+data/raw/
+Running the Project
+Run full pipeline
+
+python scripts/run_pipeline.py
+
+Train models
+python scripts/train_all_models.py
+
+### Evaluate models
+python scripts/evaluate_all_models.py
+
+### Simulate Jira workflow
+python scripts/simulate_jira_stream.py
+
+### Launch dashboard
+streamlit run src/dashboard/app.py
+
+
+### Key Findings
+
+- Ensemble models (e.g., Random Forest, Gradient Boosting) achieved the best overall predictive performance.
+
+- Traditional models provided interpretable baselines but struggled with complex patterns.
+
+- Adaptive/streaming models demonstrated potential in handling evolving risks, particularly in dynamic Agile environments.
+
+- Cost-sensitive evaluation highlighted the critical importance of minimizing False Negatives in risk prediction.
+
+## Future Work
+- Integration of Large Language Models (LLMs) for risk identification from textual data
+
+- Reinforcement learning for automated risk mitigation strategies
+
+- Real-time deployment in production Agile environments
+
+- Multi-agent AI systems for collaborative risk monitoring
+
+### Author
+## Chipo Jokonya
+MSc Applied Data Science
+Group IT Manager | Data & AI Enthusiast
+
+## License
+
+This project is licensed under the MIT License.
+
+## cknowledgements
+
+This work was conducted as part of a postgraduate research study in applied data science, focusing on AI-driven risk management in Agile software projects.
+
+---
