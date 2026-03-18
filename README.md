@@ -192,33 +192,6 @@ This work was conducted as part of a postgraduate research study in applied data
 
 ````
 
-A few little gremlins I fixed:
-- closed all code blocks
-- added the missing `## Running the Project` heading
-- put commands inside fenced blocks
-- fixed `Acknowledgements`
-- made heading levels consistent
-
-If GitHub is still refusing to save after this, then it is probably **not** the markdown itself, but one of these:
-- you are editing in the GitHub web editor and there is a temporary browser glitch
-- the repo/file is in a state with unresolved changes
-- your internet connection hiccuped during save
-- you do not have write permission to that repository
-
-The fastest test: create a brand new file called `test.md`, paste just this into it, and save:
-
-```markdown
-# Test
-
-## Hello
-
-```bash
-echo "working"
-````
-
-```
-
-
 
 Paste the exact GitHub error message if it shows one, and I’ll decode it.
 ```
