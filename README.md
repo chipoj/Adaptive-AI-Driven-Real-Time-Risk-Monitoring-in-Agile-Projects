@@ -1,3 +1,4 @@
+````markdown
 # Adaptive AI-Driven Real-Time Risk Monitoring in Agile Projects
 
 ## Overview
@@ -28,10 +29,10 @@ The objective of this study is to identify and evaluate machine learning approac
 ## Datasets
 The project uses the following publicly available datasets:
 
-- TAWOS Dataset  
-- Jira Social Repository Dataset  
-- User Story NeoDataset  
-- Agile Scrum Sprint Velocity Dataset  
+- TAWOS Dataset
+- Jira Social Repository Dataset
+- User Story NeoDataset
+- Agile Scrum Sprint Velocity Dataset
 
 > Note: Due to size or licensing restrictions, datasets are not included in this repository. Please download them separately and place them in the `data/raw/` directory.
 
@@ -40,117 +41,184 @@ The project uses the following publicly available datasets:
 ## Model Categories
 
 ### 1. Traditional Machine Learning
-- Logistic Regression  
-- Support Vector Machine (SVM)  
-- K-Nearest Neighbors (KNN)  
-- Decision Tree  
+- Logistic Regression
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+- Decision Tree
 
 ### 2. Ensemble Learning
-- Random Forest  
-- Extra Trees  
-- Gradient Boosting  
-- AdaBoost  
+- Random Forest
+- Extra Trees
+- Gradient Boosting
+- AdaBoost
 
 ### 3. Adaptive / Streaming Models
-- Hoeffding Adaptive Tree  
-- Online Bagging / Adaptive methods (e.g., ADWIN-based approaches)  
+- Hoeffding Adaptive Tree
+- Online Bagging / Adaptive methods (e.g., ADWIN-based approaches)
 
 ---
 
 ## Evaluation Metrics
 Models are evaluated using:
 
-- Accuracy  
-- Precision  
-- Recall  
-- F1-score  
-- ROC-AUC  
-- Confusion Matrix  
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+- Confusion Matrix
 - Cost-sensitive analysis (impact of False Negatives vs False Positives)
-
----
-
 
 ---
 
 ## Technology Stack
 
-- Python  
-- pandas, NumPy  
-- scikit-learn  
-- River (for streaming models)  
-- Streamlit  
-- Jira REST API  
+- Python
+- pandas, NumPy
+- scikit-learn
+- River (for streaming models)
+- Streamlit
+- Jira REST API
 
 ---
 
 ## Setup Instructions
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/your-username/adaptive-agile-risk-monitoring.git
 cd adaptive-agile-risk-monitoring
+````
 
-###  2. Create virtual environment
+### 2. Create virtual environment
+
+```bash
 python -m venv venv
-source venv/bin/activate      # Linux / Mac
-venv\Scripts\activate         # Windows
+source venv/bin/activate
+```
+
+For Windows:
+
+```bash
+venv\Scripts\activate
+```
 
 ### 3. Install dependencies
-pip install -r requirements.txt
 
-###  4. Add datasets
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add datasets
 
 Place all datasets inside:
+
+```text
 data/raw/
-Running the Project
-Run full pipeline
+```
 
+---
+
+## Running the Project
+
+### Run full pipeline
+
+```bash
 python scripts/run_pipeline.py
+```
 
-Train models
+### Train models
+
+```bash
 python scripts/train_all_models.py
+```
 
 ### Evaluate models
+
+```bash
 python scripts/evaluate_all_models.py
+```
 
 ### Simulate Jira workflow
+
+```bash
 python scripts/simulate_jira_stream.py
+```
 
 ### Launch dashboard
+
+```bash
 streamlit run src/dashboard/app.py
+```
 
+---
 
-### Key Findings
+## Key Findings
 
-- Ensemble models (e.g., Random Forest, Gradient Boosting) achieved the best overall predictive performance.
+* Ensemble models (e.g., Random Forest, Gradient Boosting) achieved the best overall predictive performance.
+* Traditional models provided interpretable baselines but struggled with complex patterns.
+* Adaptive/streaming models demonstrated potential in handling evolving risks, particularly in dynamic Agile environments.
+* Cost-sensitive evaluation highlighted the critical importance of minimizing False Negatives in risk prediction.
 
-- Traditional models provided interpretable baselines but struggled with complex patterns.
-
-- Adaptive/streaming models demonstrated potential in handling evolving risks, particularly in dynamic Agile environments.
-
-- Cost-sensitive evaluation highlighted the critical importance of minimizing False Negatives in risk prediction.
+---
 
 ## Future Work
-- Integration of Large Language Models (LLMs) for risk identification from textual data
 
-- Reinforcement learning for automated risk mitigation strategies
+* Integration of Large Language Models (LLMs) for risk identification from textual data
+* Reinforcement learning for automated risk mitigation strategies
+* Real-time deployment in production Agile environments
+* Multi-agent AI systems for collaborative risk monitoring
 
-- Real-time deployment in production Agile environments
+---
 
-- Multi-agent AI systems for collaborative risk monitoring
+## Author
 
-### Author
-## Chipo Jokonya
+**Chipo Jokonya**
 MSc Applied Data Science
 Group IT Manager | Data & AI Enthusiast
+
+---
 
 ## License
 
 This project is licensed under the MIT License.
 
-## cknowledgements
+---
+
+## Acknowledgements
 
 This work was conducted as part of a postgraduate research study in applied data science, focusing on AI-driven risk management in Agile software projects.
 
----
+````
+
+A few little gremlins I fixed:
+- closed all code blocks
+- added the missing `## Running the Project` heading
+- put commands inside fenced blocks
+- fixed `Acknowledgements`
+- made heading levels consistent
+
+If GitHub is still refusing to save after this, then it is probably **not** the markdown itself, but one of these:
+- you are editing in the GitHub web editor and there is a temporary browser glitch
+- the repo/file is in a state with unresolved changes
+- your internet connection hiccuped during save
+- you do not have write permission to that repository
+
+The fastest test: create a brand new file called `test.md`, paste just this into it, and save:
+
+```markdown
+# Test
+
+## Hello
+
+```bash
+echo "working"
+````
+
+```
+
+
+
+Paste the exact GitHub error message if it shows one, and I’ll decode it.
+```
